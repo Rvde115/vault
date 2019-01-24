@@ -61,9 +61,7 @@ function Blink(correct)
         if(timesBlinked == 6)
         {
             clearInterval(Blinker);
-            button1.disabled = false;
-            button2.disabled = false;
-            button3.disabled = false;
+            disableInput();
         }
         timesBlinked++;
     }, 500);
