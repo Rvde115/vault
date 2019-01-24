@@ -17,10 +17,9 @@
             <div id = "greenlight"></div>
             <div id = "button-container">
                 <h1> Enter the Code</h1>
-                <h2> ...</h2>
-                <button value = "1" onclick = "buttonNumberClick('1')" class = "button"> 1 </button>
-                <button value = "2" onclick = "buttonNumberClick('2')" class = "button"> 2 </button>
-                <button value = "3" onclick = "buttonNumberClick('3')" class = "button"> 3 </button>
+                <button value = "1" onclick = "buttonNumberClick('1')" class = "button" id = "button1"> 1 </button>
+                <button value = "2" onclick = "buttonNumberClick('2')" class = "button" id = "button2"> 2 </button>
+                <button value = "3" onclick = "buttonNumberClick('3')" class = "button" id = "button3"> 3 </button>
             </div>    
         </div>
 

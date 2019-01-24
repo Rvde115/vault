@@ -61,6 +61,9 @@ function Blink(correct)
         if(timesBlinked == 6)
         {
             clearInterval(Blinker);
+            button1.disabled = false;
+            button2.disabled = false;
+            button3.disabled = false;
         }
         timesBlinked++;
     }, 500);
@@ -68,14 +71,20 @@ function Blink(correct)
 
 function disableInput()
 {
-    var button = document.getElementsByClassName("button");
-   if(button.disabled == false)
-   {
-    button.disabled = true;
-   }
-   else
-   {
-    button.disabled = false;
-   }
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    if(button1.disabled == false)
+    {
+        button1.disabled = true;
+        button2.disabled = true;
+        button3.disabled = true;
+    }
+    else
+    {
+        button1.disabled = false;
+        button2.disabled = false;
+        button3.disabled = false;
+    }
     
 }
