@@ -10,25 +10,55 @@ function buttonNumberClick(clickedButton)
         disableInput();
         if(guessedPassword == 123)
         {
-            alert("vault open");
+            var audio = new Audio('Sounds\\vaultOpen.mp3');
+            audio.load();
+            audio.play(); 
+            alert("code is correct");
             Blink(1);
+            
         }
         else
         {
-            alert("WRONG!");
+            var audio = new Audio('Sounds\\vaultClose.mp3');
+            audio.load();
+            audio.play(); 
+            alert("code is incorrect");
             Blink(0);
         }
         guessedPassword = "";
     } 
 }
 
+
 function Blink(correct)
 {
     var timesBlinked = 1;
     var blinkElement;
+    var defaultColor;
+    var blinkColor;
+    if(correct == 1)
+    {
+        blinkElement = document.getElementById("greenlight");
+        blinkColor = "lightgreen";
+        defaultColor = "green";
+    }
+    else
+    {
+        blinkElement = document.getElementById("redlight");
+        blinkColor = "red";
+        defaultColor = "darkred";
+    }
     var Blinker = setInterval(function()
     { 
-        if(timesBlinked = 6)
+        if(timesBlinked == 1 || timesBlinked == 3 || timesBlinked == 5)
+        {
+            blinkElement.style.backgroundColor = blinkColor;   
+        }
+        else
+        {
+            blinkElement.style.backgroundColor = defaultColor;
+        }
+        if(timesBlinked == 6)
         {
             clearInterval(Blinker);
         }
